@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="森のすみか - こだわりのたい焼き専門店。厳選素材で焼き上げる、ふっくら香ばしいたい焼きをお届けします。">
+  <title>森のすみか | たい焼き専門店</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#top">森のすみか</a>
+      </h1>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">当店について</a></li>
+          <li class="nav__item"><a href="#menu" class="nav__link">メニュー</a></li>
+          <li class="nav__item"><a href="#shop" class="nav__link">店舗情報</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section id="top" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">こだわりのたい焼き専門店</p>
+      <h2 class="hero__title">一匹一匹、<br class="sp-only">心を込めて</h2>
+      <p class="hero__text">厳選した北海道産小豆と<br>国産小麦で焼き上げる<br>ふっくら香ばしいたい焼き</p>
+      <a href="#menu" class="hero__btn">メニューを見る</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- 当店について -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section__title">当店について</h2>
+        <div class="about__content">
+          <div class="about__image">
+            <img src="images/about.jpg" alt="店内の様子" loading="lazy" width="600" height="400">
+          </div>
+          <div class="about__text">
+            <h3 class="about__heading">素材へのこだわり</h3>
+            <p>「森のすみか」は、昔ながらの製法を大切にしながら、素材一つひとつにこだわったたい焼き専門店です。</p>
+            <p>北海道十勝産の厳選小豆を使用した自家製あんこ、国産小麦100%の生地、そして一匹ずつ丁寧に焼き上げる「一丁焼き」製法。</p>
+            <p>外はパリッと、中はふんわり。あんこはほどよい甘さで、素材本来の味わいをお楽しみいただけます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- メニュー -->
+    <section id="menu" class="menu section">
+      <div class="container">
+        <h2 class="section__title">メニュー</h2>
+        <p class="section__lead">定番のあんこから季節限定まで、<br class="sp-only">バリエーション豊かなたい焼きをご用意</p>
+        <div class="menu__grid">
+          <!-- 商品1: つぶあん -->
+          <article class="menu__card">
+            <div class="menu__image">
+              <img src="images/taiyaki-tsubuan.jpg" alt="つぶあんたい焼き" loading="lazy" width="300" height="200">
+            </div>
+            <div class="menu__body">
+              <h3 class="menu__name">つぶあん</h3>
+              <p class="menu__desc">北海道十勝産小豆を使用。粒の食感と優しい甘さが自慢の定番メニュー。</p>
+              <p class="menu__price"><span>200</span>円（税込）</p>
+            </div>
+          </article>
+
+          <!-- 商品2: こしあん -->
+          <article class="menu__card">
+            <div class="menu__image">
+              <img src="images/taiyaki-koshian.jpg" alt="こしあんたい焼き" loading="lazy" width="300" height="200">
+            </div>
+            <div class="menu__body">
+              <h3 class="menu__name">こしあん</h3>
+              <p class="menu__desc">なめらかな口当たりのこしあん。上品な甘さで幅広い世代に人気。</p>
+              <p class="menu__price"><span>200</span>円（税込）</p>
+            </div>
+          </article>
+
+          <!-- 商品3: クリーム -->
+          <article class="menu__card">
+            <div class="menu__image">
+              <img src="images/taiyaki-cream.jpg" alt="クリームたい焼き" loading="lazy" width="300" height="200">
+            </div>
+            <div class="menu__body">
+              <h3 class="menu__name">カスタードクリーム</h3>
+              <p class="menu__desc">自家製カスタードクリームをたっぷり。お子様にも大人気のメニュー。</p>
+              <p class="menu__price"><span>230</span>円（税込）</p>
+            </div>
+          </article>
+
+          <!-- 商品4: 季節限定 -->
+          <article class="menu__card menu__card--seasonal">
+            <div class="menu__badge">季節限定</div>
+            <div class="menu__image">
+              <img src="images/taiyaki-seasonal.jpg" alt="季節限定たい焼き" loading="lazy" width="300" height="200">
+            </div>
+            <div class="menu__body">
+              <h3 class="menu__name">抹茶あん</h3>
+              <p class="menu__desc">京都宇治産の抹茶を贅沢に使用。ほろ苦い大人の味わい。</p>
+              <p class="menu__price"><span>250</span>円（税込）</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 店舗情報 -->
+    <section id="shop" class="shop section">
+      <div class="container">
+        <h2 class="section__title">店舗情報</h2>
+        <div class="shop__content">
+          <div class="shop__info">
+            <dl class="shop__list">
+              <div class="shop__item">
+                <dt>店舗名</dt>
+                <dd>森のすみか</dd>
+              </div>
+              <div class="shop__item">
+                <dt>住所</dt>
+                <dd>〒000-0000<br>東京都○○区○○町1-2-3</dd>
+              </div>
+              <div class="shop__item">
+                <dt>電話番号</dt>
+                <dd><a href="tel:03-0000-0000">03-0000-0000</a></dd>
+              </div>
+              <div class="shop__item">
+                <dt>営業時間</dt>
+                <dd>10:00 〜 18:00<br><small>※売り切れ次第終了</small></dd>
+              </div>
+              <div class="shop__item">
+                <dt>定休日</dt>
+                <dd>毎週水曜日・第3火曜日</dd>
+              </div>
+              <div class="shop__item">
+                <dt>アクセス</dt>
+                <dd>○○線「○○駅」徒歩5分</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="shop__map">
+            <!-- Google Maps埋め込み（住所確定後に差し替え） -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030555079!2d139.76493807620945!3d35.68123622998499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1234567890"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="店舗の地図">
+            </iframe>
+            <p class="shop__map-note">※地図は仮のものです。正式な住所確定後に更新します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">森のすみか</p>
+        <p class="footer__copy">&copy; 2024 森のすみか All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

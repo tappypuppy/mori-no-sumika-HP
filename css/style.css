@@ -1,0 +1,706 @@
+/* ========================================
+   森のすみか - たい焼き専門店
+   スタイルシート
+======================================== */
+
+/* リセット・基本設定 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* カラー */
+  --color-primary: #D4A574;
+  --color-primary-dark: #B8895A;
+  --color-primary-light: #E8C9A8;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #FAF7F4;
+  --color-border: #E5E5E5;
+
+  /* フォント */
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-serif: 'Noto Serif JP', serif;
+
+  /* サイズ */
+  --max-width: 1200px;
+  --header-height: 70px;
+
+  /* トランジション */
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* コンテナ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* セクション共通 */
+.section {
+  padding: 80px 0;
+}
+
+.section__title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 15px auto 0;
+}
+
+.section__lead {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+}
+
+/* SP専用改行 */
+.sp-only {
+  display: none;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo a {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.header__logo a:hover {
+  color: var(--color-primary);
+}
+
+/* ナビゲーション */
+.nav__list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  position: absolute;
+  left: 0;
+  transition: var(--transition);
+}
+
+.hamburger__line:nth-child(1) {
+  top: 0;
+}
+
+.hamburger__line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger__line:nth-child(3) {
+  bottom: 0;
+}
+
+/* ハンバーガー開いた状態 */
+.hamburger.is-active .hamburger__line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.is-active .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active .hamburger__line:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* ========================================
+   ヒーローセクション
+======================================== */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(135deg, #E8C9A8 0%, #D4A574 100%);
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero__text {
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.hero__btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: var(--transition);
+}
+
+.hero__btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+}
+
+/* ========================================
+   当店について
+======================================== */
+.about {
+  background-color: var(--color-bg);
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about__image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.about__image:hover img {
+  transform: scale(1.05);
+}
+
+.about__heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--color-primary-dark);
+}
+
+.about__text p {
+  margin-bottom: 15px;
+  color: var(--color-text-light);
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   メニュー
+======================================== */
+.menu {
+  background-color: var(--color-bg-alt);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.menu__card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  position: relative;
+}
+
+.menu__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.menu__card--seasonal {
+  border: 2px solid var(--color-primary);
+}
+
+.menu__badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.menu__image {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+}
+
+.menu__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.menu__card:hover .menu__image img {
+  transform: scale(1.1);
+}
+
+.menu__body {
+  padding: 20px;
+}
+
+.menu__name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.menu__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.menu__price {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.menu__price span {
+  font-size: 1.5rem;
+  margin-right: 2px;
+}
+
+/* ========================================
+   店舗情報
+======================================== */
+.shop {
+  background-color: var(--color-bg);
+}
+
+.shop__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.shop__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.shop__item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.shop__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.shop__item dt {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.shop__item dd {
+  color: var(--color-text-light);
+}
+
+.shop__item dd a {
+  color: var(--color-primary-dark);
+}
+
+.shop__item dd a:hover {
+  text-decoration: underline;
+}
+
+.shop__item dd small {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.shop__map {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shop__map iframe {
+  display: block;
+}
+
+.shop__map-note {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-bg-alt);
+}
+
+/* ========================================
+   フッター
+======================================== */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer__inner {
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color-primary-light);
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* ========================================
+   レスポンシブ（タブレット）
+======================================== */
+@media (max-width: 1024px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================
+   レスポンシブ（モバイル）
+======================================== */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .sp-only {
+    display: inline;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+
+  /* ヘッダー・ナビ */
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-bg);
+    padding: 100px 40px 40px;
+    transition: var(--transition);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.is-open {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .nav__link {
+    font-size: 1.1rem;
+  }
+
+  /* ヒーロー */
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero__text {
+    font-size: 0.9rem;
+  }
+
+  .hero__btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+
+  /* About */
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about__heading {
+    font-size: 1.3rem;
+  }
+
+  /* Menu */
+  .menu__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .menu__card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+  }
+
+  .menu__card--seasonal {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .menu__badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .menu__image {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .menu__body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu__name {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .menu__desc {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .menu__price span {
+    font-size: 1.2rem;
+  }
+
+  /* Shop */
+  .shop__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .shop__item {
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 30px 0;
+  }
+}
+
+/* オーバーレイ（モバイルメニュー用） */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 画像プレースホルダー */
+.menu__image img[src*="images/"],
+.about__image img[src*="images/"],
+.hero {
+  background-color: var(--color-primary-light);
+}
