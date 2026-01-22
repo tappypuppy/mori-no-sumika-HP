@@ -1,5 +1,5 @@
 /* ========================================
-   森のすみか - たい焼き専門店
+   杜の栖 - たい焼き専門店
    スタイルシート
 ======================================== */
 
@@ -130,14 +130,17 @@ ul {
 }
 
 .header__logo a {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+  display: block;
 }
 
-.header__logo a:hover {
-  color: var(--color-primary);
+.header__logo-img {
+  height: 50px;
+  width: auto;
+  transition: var(--transition);
+}
+
+.header__logo a:hover .header__logo-img {
+  opacity: 0.8;
 }
 
 /* ナビゲーション */
@@ -224,7 +227,7 @@ ul {
   height: 100vh;
   min-height: 600px;
   background: linear-gradient(135deg, #E8C9A8 0%, #D4A574 100%);
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/main-visual.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -342,9 +345,123 @@ ul {
   background-color: var(--color-bg-alt);
 }
 
+.menu__category {
+  margin-bottom: 60px;
+}
+
+.menu__category:last-child {
+  margin-bottom: 0;
+}
+
+.menu__category-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+}
+
+.menu__category-header--reverse {
+  direction: rtl;
+}
+
+.menu__category-header--reverse > * {
+  direction: ltr;
+}
+
+.menu__category-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-primary-light);
+}
+
+.menu__category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.menu__category-header:hover .menu__category-image img {
+  transform: scale(1.05);
+}
+
+.menu__category-info {
+  padding: 30px 40px 30px 0;
+}
+
+.menu__category-header--reverse .menu__category-info {
+  padding: 30px 0 30px 40px;
+}
+
+.menu__category-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: var(--color-primary-dark);
+}
+
+.menu__category-desc {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.menu__list {
+  border-top: 1px solid var(--color-border);
+}
+
+.menu__list--2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.menu__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu__list-name {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu__list-badge {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.menu__list-price {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.menu__list-note {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* 以下は使用しないが互換性のため残す */
 .menu__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -355,28 +472,6 @@ ul {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
   position: relative;
-}
-
-.menu__card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.menu__card--seasonal {
-  border: 2px solid var(--color-primary);
-}
-
-.menu__badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: var(--color-primary);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: 20px;
-  z-index: 1;
 }
 
 .menu__image {
@@ -614,6 +709,55 @@ ul {
   }
 
   /* Menu */
+  .menu__category {
+    margin-bottom: 40px;
+  }
+
+  .menu__category-header {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .menu__category-header--reverse {
+    direction: ltr;
+  }
+
+  .menu__category-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .menu__category-info {
+    padding: 25px 20px;
+  }
+
+  .menu__category-header--reverse .menu__category-info {
+    padding: 25px 20px;
+  }
+
+  .menu__category-title {
+    font-size: 1.3rem;
+  }
+
+  .menu__category-desc {
+    font-size: 0.85rem;
+  }
+
+  .menu__list--2col {
+    grid-template-columns: 1fr;
+  }
+
+  .menu__list-item {
+    padding: 10px 0;
+  }
+
+  .menu__list-name {
+    font-size: 0.9rem;
+  }
+
+  .menu__list-price {
+    font-size: 0.9rem;
+  }
+
   .menu__grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -621,10 +765,6 @@ ul {
 
   .menu__card {
     display: grid;
-    grid-template-columns: 120px 1fr;
-  }
-
-  .menu__card--seasonal {
     grid-template-columns: 120px 1fr;
   }
 
