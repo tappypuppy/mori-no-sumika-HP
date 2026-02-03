@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=Yuji+Syuku&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,7 +40,7 @@
     <div class="hero__content">
       <p class="hero__subtitle">幸せの黄金鯛焼き</p>
       <h2 class="hero__title">お客様の幸せのために、<br class="sp-only">心を込めて</h2>
-      <p class="hero__text">厳選した北海道産小豆と<br>国産小麦で焼き上げる<br>ふっくら香ばしいたい焼き</p>
+      <p class="hero__text">種子島産安納芋をたっぷり使った<br>自家製黄金あん！<br>スィートポテトのような甘さがクセになる、<br>看板たい焼きです。</p>
       <a href="#menu" class="hero__btn">メニューを見る</a>
     </div>
   </section>
@@ -49,16 +49,15 @@
     <!-- 当店について -->
     <section id="about" class="about section">
       <div class="container">
-        <h2 class="section__title">当店について</h2>
-        <div class="about__content">
-          <div class="about__image">
-            <img src="images/about.jpg" alt="店内の様子" loading="lazy" width="600" height="400">
+        <div class="about__content about__content--vertical">
+          <div class="about__text calligraphy__content">
+            <h3 class="calligraphy__title">杜の栖</h3>
+            <div class="calligraphy__text">
+              <p>いつ<span class="accent">も</span><br>ほっとした<span class="accent">り</span><br>一息つける<br>みんな<span class="accent">の</span><br>居場所。<br><span class="accent">す</span>てきな<br>出逢いに<br>恵まれ<br>楽しく<br>歩<span class="accent">み</span>続けて<br>いける<br>くう<span class="accent">か</span>んを</p>
+            </div>
           </div>
-          <div class="about__text">
-            <h3 class="about__heading">素材へのこだわり</h3>
-            <p>「杜の栖」は、昔ながらの製法を大切にしながら、素材一つひとつにこだわったたい焼き専門店です。</p>
-            <p>北海道十勝産の厳選小豆を使用した自家製あんこ、国産小麦100%の生地、そして一匹ずつ丁寧に焼き上げる「一丁焼き」製法。</p>
-            <p>外はパリッと、中はふんわり。あんこはほどよい甘さで、素材本来の味わいをお楽しみいただけます。</p>
+          <div class="about__image">
+            <img src="images/building.jpg" alt="店舗外観" loading="lazy" width="600" height="400">
           </div>
         </div>
       </div>
@@ -68,7 +67,7 @@
     <section id="menu" class="menu section">
       <div class="container">
         <h2 class="section__title">メニュー</h2>
-        <p class="section__lead">こだわりの自家製あんを使った<br class="sp-only">当店自慢の鯛焼きと甘味をご用意</p>
+        <p class="section__lead">安納芋を使った<br class="sp-only">当店自慢の鯛焼きと甘味をご用意</p>
 
         <!-- 薄皮鯛焼き -->
         <div class="menu__category">
@@ -82,15 +81,15 @@
               <ul class="menu__list">
                 <li class="menu__list-item">
                   <span class="menu__list-name">黄金あん<span class="menu__list-badge">看板</span></span>
-                  <span class="menu__list-price">200円</span>
+                  <span class="menu__list-price">230円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">カスタード</span>
-                  <span class="menu__list-price">200円</span>
+                  <span class="menu__list-name">カスタード（＋安納芋ペースト）</span>
+                  <span class="menu__list-price">230円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">つぶあん</span>
-                  <span class="menu__list-price">200円</span>
+                  <span class="menu__list-name">つぶあん（＋安納芋ペースト）</span>
+                  <span class="menu__list-price">230円</span>
                 </li>
               </ul>
             </div>
@@ -101,7 +100,7 @@
         <div class="menu__category">
           <div class="menu__category-header menu__category-header--reverse">
             <div class="menu__category-image">
-              <img src="images/croissant.jpg" alt="クロワッサン鯛焼き" loading="lazy" width="400" height="300">
+              <img src="images/kuro-tai.jpg" alt="クロワッサン鯛焼き" loading="lazy" width="400" height="300">
             </div>
             <div class="menu__category-info">
               <h3 class="menu__category-title">クロワッサン鯛焼き</h3>
@@ -109,15 +108,15 @@
               <ul class="menu__list">
                 <li class="menu__list-item">
                   <span class="menu__list-name">黄金あん</span>
-                  <span class="menu__list-price">250円</span>
+                  <span class="menu__list-price">340円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">カスタード</span>
-                  <span class="menu__list-price">250円</span>
+                  <span class="menu__list-price">340円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">つぶあん</span>
-                  <span class="menu__list-price">250円</span>
+                  <span class="menu__list-price">340円</span>
                 </li>
               </ul>
             </div>
@@ -136,7 +135,7 @@
               <ul class="menu__list">
                 <li class="menu__list-item">
                   <span class="menu__list-name">トロトロわらび餅</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-price">570円</span>
                 </li>
               </ul>
             </div>
@@ -146,12 +145,12 @@
         <!-- ソフトクリーム -->
         <div class="menu__category">
           <div class="menu__category-header menu__category-header--reverse">
-            <div class="menu__category-image">
-              <img src="images/softcream.jpg" alt="ソフトクリーム" loading="lazy" width="400" height="300">
+            <div class="menu__category-image menu__category-image--zoom-out">
+              <img src="images/soft-cream.jpg" alt="ソフトクリーム" loading="lazy" width="400" height="300">
             </div>
             <div class="menu__category-info">
               <h3 class="menu__category-title">ソフトクリーム</h3>
-              <p class="menu__category-desc">濃厚でクリーミーな味わい。鯛焼きとの相性も抜群です。</p>
+              <p class="menu__category-desc">北海道産牛乳を使用した濃厚でクリーミーな味わい。<br/>鯛焼きとの相性も抜群です。</p>
               <ul class="menu__list">
                 <li class="menu__list-item">
                   <span class="menu__list-name">鯛焼きソフトクリーム</span>
@@ -159,23 +158,23 @@
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">わらび餅ソフトクリーム</span>
-                  <span class="menu__list-price">450円</span>
+                  <span class="menu__list-price">460円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">コーヒーゼリーソフトクリーム</span>
-                  <span class="menu__list-price">400円</span>
+                  <span class="menu__list-price">460円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">混ぜるいちごシェイク</span>
-                  <span class="menu__list-price">450円</span>
+                  <span class="menu__list-price">460円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">混ぜるチョコシェイク</span>
-                  <span class="menu__list-price">450円</span>
+                  <span class="menu__list-price">460円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">アフォガード</span>
-                  <span class="menu__list-price">450円</span>
+                  <span class="menu__list-price">460円</span>
                 </li>
               </ul>
             </div>
@@ -185,7 +184,7 @@
         <!-- お飲み物 -->
         <div class="menu__category">
           <div class="menu__category-header">
-            <div class="menu__category-image">
+            <div class="menu__category-image menu__category-image--zoom-out">
               <img src="images/drinks.jpg" alt="お飲み物" loading="lazy" width="400" height="300">
             </div>
             <div class="menu__category-info">
@@ -194,43 +193,47 @@
               <ul class="menu__list menu__list--2col">
                 <li class="menu__list-item">
                   <span class="menu__list-name">コーヒー（H/I）</span>
-                  <span class="menu__list-price">300円</span>
+                  <span class="menu__list-price">360円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">カフェラテ（H/I）</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-price">400円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">レモネード</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-name">レモネード（H/I）</span>
+                  <span class="menu__list-price">360円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">フルーツソーダ</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-price">360円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">フルーツ紅茶（H/I）</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-price">360円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">甘酒</span>
-                  <span class="menu__list-price">300円</span>
+                  <span class="menu__list-name">甘酒（H/I）</span>
+                  <span class="menu__list-price">260円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">ココア</span>
-                  <span class="menu__list-price">350円</span>
+                  <span class="menu__list-name">ココアラテ（H/I）</span>
+                  <span class="menu__list-price">360円</span>
                 </li>
                 <li class="menu__list-item">
-                  <span class="menu__list-name">お茶</span>
-                  <span class="menu__list-price">200円</span>
+                  <span class="menu__list-name">抹茶ラテ（H/I）</span>
+                  <span class="menu__list-price">360円</span>
+                </li>
+                <li class="menu__list-item">
+                  <span class="menu__list-name">お茶（H/I）</span>
+                  <span class="menu__list-price">220円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">オレンジジュース</span>
-                  <span class="menu__list-price">250円</span>
+                  <span class="menu__list-price">320円</span>
                 </li>
                 <li class="menu__list-item">
                   <span class="menu__list-name">リンゴジュース</span>
-                  <span class="menu__list-price">250円</span>
+                  <span class="menu__list-price">320円</span>
                 </li>
               </ul>
               <p class="menu__list-note">※フルーツソーダ・紅茶：りんご/オレンジ/ピーチ/グレープフルーツ<br>※H=ホット I=アイス</p>
